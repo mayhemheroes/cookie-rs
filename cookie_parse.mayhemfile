@@ -1,0 +1,5 @@
+project: cookie-rs
+target: cookie_parse
+
+cmds:
+  - cmd: /cookie_parse
