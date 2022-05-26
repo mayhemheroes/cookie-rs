@@ -51,12 +51,12 @@ jobs:
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.COOKIE_PARSE }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.COOKIE_PARSE }} --duration 600
           sarif-output: sarif
 
       - name: Start analysis for COOKIE_PARSE_ENCODED
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.COOKIE_PARSE_ENCODED }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.COOKIE_PARSE_ENCODED }} --duration 600
           sarif-output: sarif
